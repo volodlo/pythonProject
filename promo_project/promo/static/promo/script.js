@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Код, который будет выполнен после полной загрузки DOM страницы
 });
 function toggleMenu() {
-    var menu = document.getElementById("navbarMenu");
-    menu.classList.toggle("active");
+    var navbarMenu = document.getElementById("navbarMenu");
+    navbarMenu.classList.toggle("show");
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var toggler = document.querySelector(".navbar-toggler");

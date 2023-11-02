@@ -1,0 +1,25 @@
+<!-- promo_project/promo/templates/promo/profile.html -->
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Профиль пользователя</h1>
+        <h2 class="subtitle">Добро пожаловать, {{ user.get_full_name }}</h2>
+        <div class="profile-data">
+            <p>Персональные данные:</p>
+            <ul>
+                <li>Фамилия: {{ user.last_name }}</li>
+                <li>Имя: {{ user.first_name }}</li>
+                <li>E-mail: {{ user.email }}</li>
+                <li>Телефон: {{ user.phone }}</li>
+            </ul>
+        </div>
+        <a href="http://127.0.0.1:8000/edit_profile/" class="btn">Редактировать профиль</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- promo_project/promo/templates/promo/register.html -->
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Регистрация</h1>
+        <form class="form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id="register-btn" type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <script src="{% static 'promo/register.js' %}"></script>
+</body>
+</html>

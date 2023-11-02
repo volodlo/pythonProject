@@ -1,0 +1,23 @@
+<!-- promo_project/promo/templates/promo/login.html -->
+{% extends 'promo/base.html' %}
+{%load static%}
+{% block content %}
+    <div class="container">
+        <h1 class="header">Авторизация</h1>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+    </div>
+{% endblock %}

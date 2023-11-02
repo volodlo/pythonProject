@@ -1,0 +1,22 @@
+<!-- promo_project/promo/templates/promo/add_house.html -->
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Добавить дом</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/add_house.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Добавить дом</h1>
+        <form class="form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id="add-house-btn" type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <script src="{% static 'promo/add_house.js' %}"></script>
+</body>
+</html>

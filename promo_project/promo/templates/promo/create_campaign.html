@@ -1,0 +1,22 @@
+<!-- promo_project/promo/templates/promo/create_campaign.html -->
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Создать кампанию</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/create_campaign.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Создать кампанию</h1>
+        <form class="form" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id="create-campaign-btn" type="submit">Создать кампанию</button>
+        </form>
+    </div>
+
+    <script src="{% static 'promo/create_campaign.js' %}"></script>
+</body>
+</html>

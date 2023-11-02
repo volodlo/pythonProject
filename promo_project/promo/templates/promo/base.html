@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Проект Promo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'promo/styles.css' %}">
+    <script src="{% static 'promo/script.js' %}"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'home' %}">Проект Promo</a>
+            <button class="navbar-toggler" type="button" onclick="toggleMenu()">Меню</button>
+        </div>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="{% url 'add_house' %}">Добавить адрес</a></li>
+            <li><a href="{% url 'create_campaign' %}">Создать кампанию</a></li>
+            <!-- Добавьте другие ссылки на страницы вашего сайта -->
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>

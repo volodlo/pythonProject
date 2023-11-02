@@ -1,0 +1,21 @@
+<!-- promo_project/promo/templates/promo/home.html -->
+{% extends 'promo/base.html' %}
+{%load static%}
+{% block content %}
+    <div class="container">
+        <h1 class="header">Главная страница</h1>
+        <p>Добро пожаловать на главную страницу вашего сайта!</p>
+        <!-- Добавьте остальное содержимое страницы по вашему усмотрению -->
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="sidebar">
+        <h2 class="sidebar-header">Навигация</h2>
+        <ul class="sidebar-menu">
+            <li><a href="{% url 'promo:add_house' %}">Добавить адрес</a></li>
+            <li><a href="{% url 'promo:create_campaign' %}">Создать кампанию</a></li>
+            <!-- Добавьте другие ссылки на страницы вашего сайта -->
+        </ul>
+    </div>
+{% endblock %}
